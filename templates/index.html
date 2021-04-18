@@ -4,7 +4,7 @@
 
 <head>
 
-<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
 
 </head>
 
@@ -13,11 +13,13 @@
 
 <div class="calendarcontainer">
     <div class="monthnamecontainer">
-        {{ names["month"] }}
+        <span class="monthname">{{ data["month_name"] }} {{ data["year"] }}</span>
+        <a href="{{ url_for('prevmonth', year=data['year'], month=data['month']) }}" class="prevmonth"><</a>
+        <a href="{{ url_for('nextmonth', year=data['year'], month=data['month']) }}" class="nextmonth">></a>
     </div>
 
     <div class="weekdayscontainer">
-        {% for weekday in names["weekdays"] %}
+        {% for weekday in data["weekdays"] %}
         <div class="daynamecontainer">
             {{ weekday }}
         </div>
