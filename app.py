@@ -28,7 +28,7 @@ def calendar_page():
     data["month_name"] = month_name[month]
     data["year"] = str(year)
 
-    return render_template("index.html", weeks=weeks, data=data)
+    return render_template("calendar.html", weeks=weeks, data=data)
 
 
 @app.route("/prevmonth", methods=["GET"])
