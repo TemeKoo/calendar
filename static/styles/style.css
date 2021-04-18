@@ -1,0 +1,56 @@
+html, body {
+    background-color: grey;
+    height: 100%;
+}
+
+.calendarcontainer {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.monthnamecontainer {
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 0 -1px -1px;
+}
+
+.weekdayscontainer {
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.daynamecontainer {
+    width: calc(100% / 7);
+    height: 100%;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    margin: 0 -1px 0;
+}
+
+.weekcontainer {
+    width: 100%;
+    height: 16%;
+    display: flex
+}
+
+.emptyday {
+    width: calc(100% / 7);
+    height: 100%;
+    border: 1px solid black;
+    background-color: darkgrey;
+    margin: 0 -1px 0;
+}
+
+.daycontainer {
+    width: calc(100% / 7);
+    height: 100%;
+    border: 1px solid black;
+    background-color: white;
+    margin: 0 -1px 0;
+}
