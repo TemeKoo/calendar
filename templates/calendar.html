@@ -6,15 +6,15 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/all.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/calendar.css') }}">
+<script src="{{ url_for('static', filename='scripts/calendar.js') }}"></script>
 
 </head>
 
 <body>
 
-
 <div class="calendarcontainer">
     <div class="monthnamecontainer">
-        <span class="monthname">{{ data["month_name"] }} {{ data["year"] }}</span>
+        <span class="monthname">{{data["month"]}}/{{ data["year"] }} {{ data["month_name"] }}</span>
         <a href="{{ url_for('prevmonth', year=data['year'], month=data['month']) }}" class="prevmonth"><</a>
         <a href="{{ url_for('nextmonth', year=data['year'], month=data['month']) }}" class="nextmonth">></a>
     </div>
@@ -35,7 +35,7 @@
         {% else %}
         <div class="day">
             <div class="text-container">
-                <a href="#" class="day-text" contenteditable></a>
+                <a href="#" class="day-text" id="{{ day[0] ~ '-' ~ data['month'] ~ '-' ~ data['year'] }}" contenteditable></a>
             </div>
             <span class="day-number">{{ day[0] }}</span>
         </div>
@@ -45,6 +45,11 @@
     {% endfor %}
 
 </div>
+
+<script>
+    retrieve()
+    addSaveListeners()
+</script>
 
 </body>
 
