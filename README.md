@@ -1,8 +1,8 @@
 # Calendar
 
+A simple browser based calendar app to mark stuff in.
+
 ## Features
 
-* Almost full page size
-* Can add markings
-* Can change color of markings
-* Save button
+* Add markings
+* Browser saves markings automatically
